@@ -11,7 +11,7 @@ import db from "./firebase";
 function Sidebar() {
   const [rooms, setRooms] = useState([]);
   useEffect(() => {
-    db.collection("rooms").onSnapshot(snapshot =>
+    const unsubscribe = db.collection("rooms").onSnapshot(snapshot =>
       setRooms(
         snapshot.docs.map(doc => ({
           id: doc.id,
@@ -19,6 +19,9 @@ function Sidebar() {
         }))
       )
     );
+    return () => {
+      unsubscribe();
+    };
   }, []);
   return (
     <div className="sidebar">
