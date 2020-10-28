@@ -4,20 +4,18 @@ import { SearchOutlined, AttachFile, MoreVert } from "@material-ui/icons";
 import MicIcon from "@material-ui/icons/Mic";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import "./Chat.css";
-import { useParams } from "react-router-dom";
 
 export default function Chat() {
   const [input, setInput] = useState("");
   const [seed, setSeed] = useState("");
-  const { roomId } = useParams();
   useEffect(() => {
     setSeed(Math.floor(Math.random() * 5000));
   }, []);
-  const sendMessage = e => {
+  const sendMessage = (e) => {
     e.preventDefault();
-    console.log("input is ", input);
+    console.log("input is ",input);
     setInput("");
-  };
+  }
   return (
     <div className="chat">
       {/* header starts here */}
@@ -57,9 +55,7 @@ export default function Chat() {
             type="text"
             placeholder="Type a message"
           />
-          <button type="submit" onClick={sendMessage}>
-            send
-          </button>
+          <button type="submit" onClick={sendMessage}>send</button>
         </form>
         <MicIcon />
       </div>
