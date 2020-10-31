@@ -5,11 +5,13 @@
   "dependencies": {
     "@babel/runtime": "7.12.1",
     "@material-ui/core": "4.11.0",
-    "@material-ui/icons": "^4.9.1",
+    "@material-ui/icons": "4.9.1",
     "@types/react": "16.9.53",
-    "firebase": "^8.0.0",
+    "firebase": "8.0.0",
     "react": "16.14.0",
-    "react-dom": "16.14.0"
+    "react-dom": "16.14.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "5.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

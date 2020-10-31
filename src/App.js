@@ -14,9 +14,7 @@ export default function App() {
             <Route path="/rooms/:roomId">
               <Chat />
             </Route>
-            <Route path="/">
-              <Chat />
-            </Route>
+            <Route path="/">{/*<Chat />*/}</Route>
           </Switch>
         </Router>
       </div>
