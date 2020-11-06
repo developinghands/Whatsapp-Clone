@@ -18,7 +18,9 @@ const firebaseConfig = {
 //   //check firebase.apps is already loaded
 //   firebase.initializeApp(firebaseConfig);
 // }
+if(!firebase.apps.length){
 firebase.initializeApp(firebaseConfig);
+}
 const db = firebase.firestore();
 const auth = firebase.auth();
 const provider = new firebase.auth.GoogleAuthProvider();
